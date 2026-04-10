@@ -1,6 +1,6 @@
 :root {
     --primary: #1a1a1a;
-    --navy: #003057; /* GWU Navy */
+    --navy: #003057; 
     --bubble-bg: #e6edf3;
     --bg-color: #ffffff;
 }
@@ -17,7 +17,6 @@ body {
     color: #333;
 }
 
-/* Fixed Top Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -58,14 +57,12 @@ body {
     font-weight: 600;
 }
 
-/* Layout */
 .container {
     max-width: 900px;
     margin: 150px auto 100px;
     padding: 0 2rem;
 }
 
-/* Home Page Header Styling */
 .hero-header {
     margin-bottom: 2rem;
 }
@@ -78,7 +75,6 @@ body {
     letter-spacing: -1.5px;
 }
 
-/* THE NAVY BLUE BUBBLE SQUARE */
 .title-badge {
     display: inline-block;
     padding: 8px 16px;
@@ -90,7 +86,6 @@ body {
     border: 1px solid #d0d7de;
 }
 
-/* Cards & Entries for Subpages */
 .card, .project-entry, .exp-entry, .skill-box {
     background: #f9f9f9;
     padding: 2rem;
@@ -109,7 +104,6 @@ h3 {
     color: var(--navy);
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 24px;
