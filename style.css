@@ -17,6 +17,7 @@ body {
     color: #333;
 }
 
+/* Fixed Top Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -57,16 +58,51 @@ body {
     font-weight: 600;
 }
 
+/* Layout */
 .container {
-    max-width: 900px;
+    max-width: 1000px; /* Slightly wider for side-by-side content */
     margin: 150px auto 100px;
     padding: 0 2rem;
 }
 
-.hero-header {
+h2 {
+    font-size: 2.2rem;
     margin-bottom: 2rem;
+    color: var(--primary);
 }
 
+h3 {
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+/* Cards with Side-by-Side Content */
+.card, .project-entry, .exp-entry {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex; /* Makes text and image sit side-by-side */
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* The text area inside the card */
+.entry-text {
+    flex: 1; /* Takes up the remaining space */
+}
+
+/* Fixed image formatting to stop them from being "fucking huge" */
+.entry-photo {
+    width: 300px; /* Fixed width for better control */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crops the image to fit the box perfectly without stretching */
+    border-radius: 8px;
+    display: block;
+}
+
+/* Hero Badge & Name Styles */
 .name-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -86,34 +122,7 @@ body {
     border: 1px solid #d0d7de;
 }
 
-.card, .project-entry, .exp-entry, .skill-box {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-}
-
-/* NEW: Style for images inside project and experience cards */
-.entry-photo {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 1.5rem;
-    display: block;
-}
-
-h2 {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    color: var(--primary);
-}
-
-h3 {
-    margin-bottom: 0.5rem;
-    color: var(--navy);
-}
-
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -131,6 +140,14 @@ h3 {
     color: var(--primary);
 }
 
-.btn:hover {
-    opacity: 0.8;
+/* Responsive Fix: Stacks content on small screens */
+@media (max-width: 768px) {
+    .card, .project-entry, .exp-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+    .entry-photo {
+        width: 100%;
+        max-width: 400px;
+    }
 }
