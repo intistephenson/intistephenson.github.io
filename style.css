@@ -93,6 +93,16 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* NEW: Style for images inside project and experience cards */
+.entry-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    display: block;
+}
+
 h2 {
     font-size: 2.2rem;
     margin-bottom: 2rem;
