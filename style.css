@@ -86,21 +86,11 @@ body {
     color: var(--navy);
     font-size: 1.05rem;
     font-weight: 500;
-    border-radius: 4px; /* Square bubble */
+    border-radius: 4px;
     border: 1px solid #d0d7de;
 }
 
-.about-content {
-    margin-top: 2rem;
-}
-
-.lead {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-/* Cards & Entries */
+/* Cards & Entries for Subpages */
 .card, .project-entry, .exp-entry, .skill-box {
     background: #f9f9f9;
     padding: 2rem;
