@@ -17,7 +17,6 @@ body {
     color: #333;
 }
 
-/* Fixed Top Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -58,11 +57,33 @@ body {
     font-weight: 600;
 }
 
-/* Layout */
 .container {
-    max-width: 1000px; /* Slightly wider for side-by-side content */
+    max-width: 1000px;
     margin: 150px auto 100px;
     padding: 0 2rem;
+}
+
+.card, .project-entry, .exp-entry {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.entry-text {
+    flex: 1;
+}
+
+.entry-photo {
+    width: 300px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
 }
 
 h2 {
@@ -76,53 +97,6 @@ h3 {
     color: var(--navy);
 }
 
-/* Cards with Side-by-Side Content */
-.card, .project-entry, .exp-entry {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    display: flex; /* Makes text and image sit side-by-side */
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* The text area inside the card */
-.entry-text {
-    flex: 1; /* Takes up the remaining space */
-}
-
-/* Fixed image formatting to stop them from being "fucking huge" */
-.entry-photo {
-    width: 300px; /* Fixed width for better control */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Crops the image to fit the box perfectly without stretching */
-    border-radius: 8px;
-    display: block;
-}
-
-/* Hero Badge & Name Styles */
-.name-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.8rem;
-    letter-spacing: -1.5px;
-}
-
-.title-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--bubble-bg);
-    color: var(--navy);
-    font-size: 1.05rem;
-    font-weight: 500;
-    border-radius: 4px;
-    border: 1px solid #d0d7de;
-}
-
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -140,7 +114,6 @@ h3 {
     color: var(--primary);
 }
 
-/* Responsive Fix: Stacks content on small screens */
 @media (max-width: 768px) {
     .card, .project-entry, .exp-entry {
         flex-direction: column;
