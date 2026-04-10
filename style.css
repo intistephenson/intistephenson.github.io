@@ -3,7 +3,41 @@
     --accent: #003057;  /* GWU Blue for highlights */
     --bg-color: #ffffff;
 }
+.hero-header {
+    margin-bottom: 3rem;
+}
 
+.name-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1.5px;
+}
+
+/* The "Bubble Square" Title */
+.title-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e6edf3; /* Very light blue/gray background */
+    color: #003057;            /* Navy Blue Text */
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 4px;        /* "Bubble Square" - slight rounding but still blocky */
+    border: 1px solid #d0d7de;
+}
+
+/* Ensure the about content flows nicely under the badge */
+.about-content {
+    margin-top: 2rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
 * {
     margin: 0;
     padding: 0;
