@@ -1,43 +1,10 @@
 :root {
-    --primary: #1a1a1a; /* Darker, professional header text */
-    --accent: #003057;  /* GWU Blue for highlights */
+    --primary: #1a1a1a;
+    --navy: #003057; /* GWU Navy */
+    --bubble-bg: #e6edf3;
     --bg-color: #ffffff;
 }
-.hero-header {
-    margin-bottom: 3rem;
-}
 
-.name-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.5rem;
-    letter-spacing: -1.5px;
-}
-
-/* The "Bubble Square" Title */
-.title-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #e6edf3; /* Very light blue/gray background */
-    color: #003057;            /* Navy Blue Text */
-    font-size: 1.1rem;
-    font-weight: 500;
-    border-radius: 4px;        /* "Bubble Square" - slight rounding but still blocky */
-    border: 1px solid #d0d7de;
-}
-
-/* Ensure the about content flows nicely under the badge */
-.about-content {
-    margin-top: 2rem;
-}
-
-.lead {
-    font-size: 1.3rem;
-    line-height: 1.5;
-    color: #333;
-    margin-bottom: 1.5rem;
-}
 * {
     margin: 0;
     padding: 0;
@@ -50,22 +17,23 @@ body {
     color: #333;
 }
 
-/* Updated Horizontal Top Navbar - Logan Whittaker Style */
+/* Fixed Top Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background: white;
     display: flex;
-    justify-content: space-between; /* Pushes logo left, links right */
+    justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 10%; /* More breathing room on the sides */
+    padding: 1.5rem 10%;
     z-index: 1000;
+    border-bottom: 1px solid #eee;
 }
 
 .logo {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--primary);
 }
 
@@ -75,64 +43,87 @@ body {
 }
 
 .nav-links li {
-    margin-left: 2.5rem; /* Space between the links */
+    margin-left: 2.5rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #444;
+    color: #666;
     font-size: 0.95rem;
-    font-weight: 400;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: var(--accent); /* Subtle color change on hover/scroll */
+    color: var(--navy);
+    font-weight: 600;
 }
 
-/* Main Content Layout */
+/* Layout */
 .container {
     max-width: 900px;
-    margin: 150px auto 0;
+    margin: 150px auto 100px;
     padding: 0 2rem;
 }
 
-.section {
-    padding: 5rem 0;
-    /* Removed the bottom border for a cleaner look */
+/* Home Page Header Styling */
+.hero-header {
+    margin-bottom: 2rem;
 }
 
-/* Typography similar to Logan's */
-h1 { 
-    font-size: 4rem; 
-    color: var(--primary); 
+.name-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    letter-spacing: -1.5px;
+}
+
+/* THE NAVY BLUE BUBBLE SQUARE */
+.title-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--bubble-bg);
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 4px; /* Square bubble */
+    border: 1px solid #d0d7de;
+}
+
+.about-content {
+    margin-top: 2rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
-    letter-spacing: -1px;
 }
 
-h2 { 
-    font-size: 2.2rem; 
-    color: var(--primary); 
-    margin-bottom: 2rem; 
-}
-
-/* Sections look like simple cards now */
-.card, .project-entry, .exp-entry {
+/* Cards & Entries */
+.card, .project-entry, .exp-entry, .skill-box {
     background: #f9f9f9;
     padding: 2rem;
     border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
     margin-bottom: 2rem;
-    transition: transform 0.2s ease;
+    color: var(--primary);
 }
 
-.card:hover {
-    transform: translateY(-5px); /* Adds a little "pop" when hovering */
+h3 {
+    margin-bottom: 0.5rem;
+    color: var(--navy);
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #1a1a1a;
+    background: var(--primary);
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -142,6 +133,10 @@ h2 {
 
 .btn-outline {
     background: transparent;
-    border: 1px solid #1a1a1a;
-    color: #1a1a1a;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
