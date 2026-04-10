@@ -8,11 +8,21 @@
     <style>
         .hero-section {
             margin-bottom: 2rem;
+            text-align: left; /* Ensures left-aligned layout like Logan's */
         }
 
         .actions {
             margin-top: 1rem;
             margin-bottom: 2rem;
+        }
+
+        /* Styling for the inserted photo */
+        .hero-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 2rem;
+            display: block;
         }
 
         .about-box {
@@ -21,7 +31,7 @@
             border-radius: 12px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             max-width: 900px;
-            margin: 0 auto;
+            margin: 0 auto 3rem; /* Extra space at the bottom */
         }
 
         .about-box h2 {
@@ -67,6 +77,8 @@
                     Mechanical Engineering Student | The George Washington University
                 </div>
             </div>
+
+            <img src="photo.jpg" alt="Inti Stephenson" class="hero-photo">
             
             <div class="actions">
                 <a href="mailto:inti.stephenson@gwmail.gwu.edu" class="btn">Email Me</a>
